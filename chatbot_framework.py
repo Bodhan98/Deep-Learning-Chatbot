@@ -88,7 +88,7 @@ tf.reset_default_graph()
 
 #Build the neural network architecture
 net= tflearn.input_data(shape=[None, len(train_x[0])])
-#neural network consists of 3 hidden layers with 8 nodes
+#neural network consists of 3 hidden layers with batch size 8
 #At the end we connect a softmax and regression layer
 net=tflearn.fully_connected(net,8)
 net=tflearn.fully_connected(net,8)
